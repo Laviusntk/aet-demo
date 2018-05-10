@@ -1,0 +1,14 @@
+<div ng-repeat="x in myapplications">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">{{ x.applicationName }}</h4>
+            <p class="card-text">Application Date : {{ x.applicationDate }}</p>
+            <p class="card-text">Application Status : {{ x.applicationStatus }}</p>
+            <div class="Application-{{ x.applicationStatus }}">
+              <button type="button" class="btn btn-success" name="{{ x.applicationId }}">Accept</button>
+              <button type="button" class="btn btn-danger" name="{{ x.applicationId }}">Decline</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>

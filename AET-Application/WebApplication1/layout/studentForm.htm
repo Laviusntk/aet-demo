@@ -1,0 +1,144 @@
+﻿<div class="overlay">
+    <form class="studentForm" action="/Dashboard/applyscholarship">
+        <div class="con">
+            <header class="head-form">
+                <h2>Scholarship Application</h2>
+                <p>Required Information</p>
+            </header>
+            <br>
+            <div class="field-set">
+                <label>
+                    Personal Information
+                </label><br>
+                <select name="SACitizen">
+                    <option>Citizenship</option>
+                    <option>SA Citizen</option>
+                    <option>Non SA Citizen</option>
+                </select>
+                <select name="sex">
+                    <option>Sex</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                </select>
+                <select name="race">
+                    <option>Race</option>
+                    <option>African</option>
+                    <option>Indian</option>
+                    <option>White</option>
+                    <option>Colored</option>
+                </select>
+
+                <br><br>
+
+                <br>
+                <label>
+                    Next of keen Information
+                </label><br>
+                <input class="form-input" id="txt-input" type="text" name="nextOfKeenName" placeholder="Next of Keen  Name" required>
+                <input class="form-input" id="txt-input" type="text" name="nextOfKeenRelationship" placeholder="Next of Keen Relationship" required>
+                <br>
+                <input class="form-input" id="txt-input" type="text" name="nextOfKeenContacts" placeholder="Next of Keen Contacts" required>
+                <br>
+
+                <label>
+                    Secondary School Information
+                </label><br>
+                <input class="form-input" id="txt-input" type="text" name="secondarySchoolName" placeholder="Secondary School Name" required>
+                <input class="form-input" id="txt-input" type="text" name="secondarySchoolTown" placeholder="secondary School Town" required>
+                <br>
+                <input class="form-input" id="txt-input" type="text" name="secondarySchoolProvince" placeholder="secondary School Province" required>
+                <br>
+
+
+                <br>
+                <label>
+                    Tertiary School Information
+                </label><br>
+                <input class="form-input" id="txt-input" type="text" name="nameOfUniversity" placeholder="Name of University" required>
+                <input class="form-input" id="txt-input" type="text" name="nameOfDegree" placeholder="Name of Degree" required>
+                <br>
+
+                <select name="currentYearOfStudy">
+                    <option>Year of Study</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>Honours</option>
+                    <option>Masters</option>
+                    <option>PhD</option>
+                </select>
+
+                <br>
+                <br>
+                <label>
+                    Courses
+                </label><br>
+                <input class="form-input" id="txt-input" type="text" name="firstSemCourses" placeholder="First Semester Courses separated by ','" required>
+                <input class="form-input" id="txt-input" type="text" name="secSemCourses" placeholder="Second Semester Courses separated by ','" required>
+
+                <br>
+                <select name="resStudent">
+                    <option>Do you stay in a university acomodation?</option>
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <br>
+                <br>
+                <label>If you answered yes above, Enter the name of your acomodation.</label><br>
+                <input class="form-input" id="txt-input" type="text" name="accomodationName" placeholder="Acomodation Name" required>
+                <br><br>
+
+                <label>How are you currently financing your studies?</label><br>
+                <input class="form-input" id="txt-input" type="text" name="functionInfor" placeholder="Funding" required>
+                <br>
+                <br>
+                <label>Where did you here about this scholarship?</label><br>
+                <input class="form-input" id="txt-input" type="text" name="adverstisingPlartform" placeholder="Word of mouth" required>
+                <br>
+                <br>
+                <label>Are you currently recieving any bursary? If yes enter the name below.</label><br>
+                <input class="form-input" id="txt-input" type="text" name="bursryInfor" placeholder="Bursary name" required>
+
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="comment">Describe in approximately 200 words how the qualification you are seeking will benefit society in South Africa. </label><br>
+                    <textarea class="form-control" rows="20" name="motivEssay" id="comment"></textarea>
+                </div>
+                <br>
+                <br>
+                <div class="form-group">
+                    <label for="text">Have you applied for an Accenture (SA) Education Trust scholarship previously? </label><br>
+                    <select name="prevApplications">
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select><br>
+                    <label for="text">If so, when? </label><br>
+                    <input class="form-input" name="prevApplicationsDate" id="txt-input" type="date" placeholder="Date">
+                </div>
+                <br><br>
+                <label for="text">Family Inncome sources.</label><br>
+                <input class="form-input" id="txt-input" type="text" name="motherOccupation" placeholder="Mother Occupation" required>
+                <input class="form-input" id="txt-input" type="text" name="motherMonthlyIncome" placeholder="Mother monthly income" required>
+                <br><br>
+
+                <input class="form-input" id="txt-input" type="text" name="fatherOccupation" placeholder="Father Occupation" required>
+                <input class="form-input" id="txt-input" type="text" name="fatherMonthlyIncome" placeholder="Father monthly income" required>
+                <br><br>
+
+                <input class="form-input" id="txt-input" type="text" name="guardianOccupation" placeholder="Guardian Occupation" required>
+                <input class="form-input" id="txt-input" type="text" name="guardianMonthlyIncome" placeholder="Guardian monthly income" required>
+                <br><br>
+
+                <label for="text">Other income sources? </label><br>
+                <input class="form-input" id="txt-input" type="text" name="altIncomeSources" placeholder="Other income sources">
+                <br>
+
+                <button class="sign-up"> Apply </button>
+            </div>
+        </div>
+    </form>
+</div>

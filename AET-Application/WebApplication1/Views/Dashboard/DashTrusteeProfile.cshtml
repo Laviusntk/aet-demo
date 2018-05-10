@@ -1,0 +1,408 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DashTrusteesProfile</title>
+    <link href="~/Content/dashboard-styling.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/_all-skins.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <!--===================================SIDE MENU====================================-->
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top " id="side-menu">
+                <a href="/Home/Index" style="background-color:#910B0B;"><img src="~/Media Content/Accenture-red-arrow-logo -white - Copy.png" style="height: 35px; width: 120.703px; padding-left:0px;" class="hidden-xs hidden-sm" /></a>
+
+                <!--<h1 class="hidden-xs hidden-sm">Navigation</h1>-->
+                <!--=============PROFILE IMAGE======================-->
+
+                <div class="avatar-block hidden-sm hidden-xs">
+
+                    <img src="~/Media Content/asong.jpeg" class="avatar img-responsive pull-left" id="avatar-img">
+                    <div class="user-details">
+                        <span class="header-name">Asongezwa</span>
+                        <br />
+                        <span class="header-surname"><strong>Sitwebile</strong></span>
+                        <br />
+                        <span style="color:#EEA3A5; font-size: 11px;">Accenture Education Trust</span>
+                        <br />
+                        <span style="color:#EEA3A5; "><i class="fa fa-circle text-success"></i> Online</span>
+                    </div>
+
+
+                </div>
+                <!--================================================-->
+
+
+
+                <ul>
+                    <li class="link active">
+                        <a href="/Dashboard/Dashboard">
+                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Dashboard</span>
+                        </a>
+                    </li>
+
+
+                    <li class="link">
+                        <a href="/Dashboard/DashChat">
+                            <span class="fa fa-comment pull-left" aria-hidden="true"></span>
+                            <span class="label label-warning pull-right hidden-xs hidden-sm">5</span>
+                            <span class="hidden-xs hidden-sm">Chats</span>
+
+                        </a>
+                    </li>
+
+                    <li class="link">
+                        <a href="forum.html">
+                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                            <span class="label label-warning pull-right hidden-xs hidden-sm">8</span>
+                            <span class="hidden-sm hidden-xs">Forum</span>
+                        </a>
+                    </li>
+
+                    <li class="link">
+                        <a href="#collapse-comments" data-toggle="collapse" aria-controls="collapse-comments">
+                            <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                            <span class="hidden-xs hidden-sm">Comments</span>
+                        </a>
+                        <ul class="collapse collapseable" id="collapse-comments">
+                            <li>
+                                <a href="approved.html">
+                                    Approved
+                                    <span class="label label-success pull-right hidden-xs hidden-sm">10</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="unapproved.html">
+                                    Unapproved
+                                    <span class="label label-warning pull-right hidden-xs hidden-sm">10</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="link">
+                        <a href="/Calendar/Dash_Calendar">
+
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            <span class="hidden-xs hidden-sm">Calender</span>
+                        </a>
+                    </li>
+
+                    <li class="link">
+                        <a href="feedback.html">
+                            <span class="glyphicon glyphicon-flag" aria-hidden="true"></span>
+                            <span class="hidden-xs hidden-sm">Feedback</span>
+                        </a>
+                    </li>
+
+                    <li class="link">
+                        <a href="/Dashboard/DashFileUpload">
+                            <span class="glyphicon glyphicon-upload" aria-hidden="true"></span>
+                            <span class="hidden-xs hidden-sm">Upload Files</span>
+                        </a>
+                    </li>
+
+                    <li class="link settings-btn">
+                        <a href="settings.html">
+                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            <span class="hidden-xs hidden-sm">Settings</span>
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+            <!--=============================END SIDE MENU=====================================-->
+
+
+            <!--=============================MAIN CONTENT====================================-->
+
+
+            <!--==============NAVBAR-DASH=================-->
+            <div class="col-md-10 col-sm-12 box display-table-cell valign-top pull-right" id="main-content">
+                <div class="col-lg-10 col-md-12 col-sm-12 navbar-row row fixed" id="navbar-row">
+                    <header id="nav-header" class="clearfix">
+                        <div class="col-md-5">
+                            <nav class="navbar-default pull-left">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side-menu">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </nav>
+                            <input type="text" class="hidden-sm hidden-xs" id="header-search-field" placeholder="Search for something..." />
+                        </div>
+                        <div class="col-md-7">
+                            <ul class="pull-right" id="navbar-right">
+                                <li id="welcome" class="hidden-xs">Welcome to your Dashboard</li>
+                                <li class="fixed-width">
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                                        <span class="label label-warning">3</span>
+                                    </a>
+                                </li>
+                                <li class="fixed-width">
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                                        <span class="label label-message">3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="logout">
+                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"> </span>
+                                        Logout
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+                <!--=========END NAVBAR DASH========-->
+
+                <!--White space-->
+                <div class="col-md-12" style="height:50px;"></div>
+                <!--White space-->
+                <!--=========PROFILE LEFT CARD=======-->
+                <!--Author: Nthabi Msimango -->
+                <div class="col-md-8 col-sm-10 pull-left ">
+                    <!-- USERS LIST -->
+                    <div class="box box-danger">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">My Profile</h3>
+
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" i data-wdget="collapse" style="border:2px solid #eee; border-radius:10%;">
+                                    Edit Profile <i class="fa fa-pencil"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <!--box-body-->
+                        <div class="box-body no-padding " id="profile_card_left_content">
+                            <div class="avatar-row">
+                                <!--Cover Image background, ineditable-->
+                            </div>
+                            <!--Basic Info-->
+                            <div class="name-uni-block row">
+                                <div class="col-sm-3 avatar-prof-card left"></div>
+                                <div class="col-sm-6 avatar-prof-card" style="text-align: center;">
+                                    <!--Avatar-->
+                                    <div style="margin:auto; max-height:150px; max-width: 150px;"><img src="~/Media Content/asong.jpeg" class="img-responsive center" id="avatar-img"></div>
+                                    
+                                    <!--Name-->
+                                    <span class="name-surname-row" id="name-surname">Asongezwa Sitwebile</span>
+
+                                    <!--Trust Position-->
+                                    <span id="trust-pos"><strong>Chairperson</strong></span>
+                                    <br />
+                                    <!--Current Employment-->
+                                    <span id="curr-empl">South Africa of Techno Brain Group Limited</span>
+                                    <br />
+                                    <!--Current Position-->
+                                    <span id="curr-pos">Managing Director</span>
+                                </div>
+                                <div class="col-sm-3 avatar-prof-card right"></div>
+
+                            </div>
+                            <!--End of basic info-->
+
+
+                            <!--Additional Info-->
+                            <div class="age-row row">
+                               
+                                <div class="col-sm-3"></div>
+                                <div class="col-md-2 no-padding" style="text-align:center;">
+                                    <h4 id="header">Qualifications</h4>
+
+                                    <p id="header-info">BSc Computer Science and Statistics from University of Cape Town</p>
+
+                                    <p id="hearder-info">BSc Hons Computer Science from University of Witwatersrand</p>
+                                </div>
+                                
+
+                            </div>
+                            <!--End of Additional Info-->
+
+
+                            <!--Bio Section-->
+                            <div class="bio-row row">
+                                <div class="col-sm-2 left"></div>
+                                <div class="col-sm-8 center">
+                                    <h4 id="header" style="text-align:center;">Bio</h4>
+                                    <h4 id="bio" style="text-align:center;">
+                                        My opinions may have changed, but not the fact that I’m right.
+                                                                          </h4>
+                                </div>
+                                <div class="col-sm-2 right"></div>
+                            </div>
+                            <!--End Bio Section-->
+
+
+                            <!--Contact Details-->
+                            <div class="contact-row row">
+                                <div class="col-sm-1 left"></div>
+                                <div class="col-sm-10 center">
+                                    <h4 id="contact_header">Contact Details</h4>
+
+                                    <div class="contact-row">
+                                        <h5 id="contact_id">
+                                            <label>Cell No: </label>&emsp;<span id="contact-no">+27 71 234 5768</span>
+                                        </h5>
+                                    </div>
+
+                                    <div class="contact-row">
+                                        <h5 id="contact_id">
+                                            <label>E-Mail: </label>&emsp;<span id="contact-email">3438619@myuwc.ac.za</span>
+                                        </h5>
+                                    </div>
+                                    <div class="contact-row">
+                                        <h5 id="contact_id">
+                                            <label>Skype Name: </label>&emsp;<span id="contact-skype">AsongezwaSitwebile</span>
+                                        </h5>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-1 right"></div>
+                            </div>
+                            <!--End Contact details-->
+
+
+                            <!--Address Details-->
+                            <div class="address-row row">
+                                <div class="col-sm-1 left"></div>
+                                <div class="col-sm-10 center">
+                                    <h4 id="address_header">Address</h4>
+
+                                    <div class="address-row">
+                                        <h5 id="address_id">
+                                            <span class="street-name" id="address">11 Tamboekie Street</span>
+                                            <span class="suburb-name" id="address">Kuils River</span>, <span class="city-name" id="address" style="display: inline;">Cape Town</span>
+                                            <span class="post-code" id="address">7580</span>
+
+
+                                        </h5>
+                                    </div>
+
+
+                                </div>
+                                <div class="col-sm-1 right"></div>
+                            </div>
+                            <!--End Adress details-->
+                            <div class="box-footer text-center">
+
+                            </div>
+                            <!-- /.box-footer -->
+                        </div>
+                        <!-- /.box-body -->
+
+                    </div>
+                    <!--/.box -->
+                </div>
+                <!--=======END PROFILE LEFT CARD======-->
+
+
+                <!--=======ANNOUNCEMENT CARD RIGHT=====-->
+                <!--Author: Justin Erasmus -->
+                <div class="col-md-4 col-sm-10 pull-right" id="announcement-card">
+                    <!-- USERS LIST -->
+                    <div class="box box-danger" id="announcement-box-header">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Announcements</h3>
+
+                            <!--<div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" i data-wdget="collapse" style="border:2px solid #eee; border-radius:10%;">
+                                    Edit Profile <i class="fa fa-pencil"></i>
+                                </button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"></button>
+                            </div>-->
+                        </div>
+                        <!-- /.box-header -->
+                    </div>
+                    <div class="box-body no-padding" id="announcement-body">
+                        <div class="announcement-row ">
+                            <ul class="announcement-list ">
+                                <li id="announcement-item">
+
+                                    <div id="announce-card" class="col-sm-11 col-md-11">
+                                        <header id="announce-header">
+                                            <h5>Accenture Dinner Announcement</h5>
+                                        </header>
+                                        <div class="message-box">
+                                            <span id="message-text">Hi, You are hereby invited to the Accenture...</span>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li id="announcement-item">
+
+                                    <div id="announce-card" class="col-sm-11 col-md-11">
+                                        <header id="announce-header">
+                                            <h5>Accenture App Team</h5>
+                                        </header>
+                                        <div class="message-box">
+                                            <span id="message-text">Hi Team! We have successfully deployed the app...</span>
+                                        </div>
+
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!--======END ANNOUNCEMENT CARD RIGHT=====-->
+
+
+                <!--============FOOTER===============-->
+                <div class="row">
+                    <footer id="admin-footer" class="clearfix">
+                        <div class="pull-left"><b>Copyright</b>&copy; 2017</div>
+                        <div class="pull-right">admin system</div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script>
+
+            $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                    $('#side-menu').toggleClass('hidden-xs');
+                });
+            });
+    </script>
+</body>
+</html>

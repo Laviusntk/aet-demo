@@ -1,0 +1,459 @@
+﻿html body {
+    font-family: "open-sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f3f3f4;
+   
+}
+.fc-title {
+    color: white !important;
+}
+
+.fc-time {
+    color: white !important;
+}
+body {
+    height: 100%;
+}
+
+.box {
+   /*border: 1px red dotted;*/
+}
+
+#side-menu {
+    background-color: #D32F2F;
+    padding: 0px;
+    box-shadow: 1px 1px 3px #000;
+    z-index:0;
+    float: left;
+    position: fixed
+
+}
+
+    #side-menu h1 {
+        color: #1f2647;
+        text-align: center;
+        margin: 10px 0px;
+        font-size: 25px;
+    }
+
+    #side-menu ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+
+    #side-menu a {
+        padding: 12px 28px;
+        text-decoration: none;
+        color: #EEA3A5;
+        font-weight: bold;
+        font-size: 13px;
+        display: block;
+    }
+
+    #side-menu .glyphicon {
+        margin-right: 6px;
+        float: left;
+    }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #side-menu .glyphicon {
+       /** margin-right: 6px;*/
+        float: none !important;
+        display: block;
+
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    #main-content{
+        margin-left: 30%;
+    }
+}
+
+    #side-menu a:hover {
+        background-color: #910B0B;
+        color: #fff;
+        display: block;
+    }
+
+    #side-menu .active a {
+        color: #fff;
+        background-color: #910B0B;
+    }
+
+    #side-menu .settings-btn {
+        background-color: #555;
+    }
+
+        #side-menu .settings-btn a {
+            color: #fff;
+        }
+
+            #side-menu .settings-btn a:hover {
+                background-color: #1ab394;
+            }
+
+    #side-menu .collapseable li {
+        padding: 20px;
+        padding-top: 5px;
+    }
+
+    #side-menu .collapseable a {
+        color: #9fb1c2;
+        font-size: 12px;
+        padding: 0px 10px;
+        display: block;
+    }
+
+        #side-menu .collapseable a:hover {
+            color: #fff;
+        }
+
+    #side-menu .collapseable {
+        border-left: 4px solid #1ab394;
+        background-color: #293846;
+    }
+
+    #side-menu .link > ul > li {
+        padding-bottom: 10px;
+    }
+
+    /*===============PROFILE IMAGE STYLING==============*/
+
+    #side-menu .avatar-block {
+        padding: 20px 20px 30px;
+    }
+
+        #side-menu .avatar-block #avatar-img {
+            border-radius: 100px;
+            height: 100px;
+            width: 100px;
+        }
+
+    #side-menu .user-details span {
+        padding-left: 20px;
+    }
+
+    #side-menu .user-details .header-name {
+        color: #fff;
+    }
+
+    #side-menu .user-details .header-surname {
+        color: #fff;
+        font-size: 18px;
+    }
+
+@media only screen and (min-width: 1445px) {
+    #side-menu .avatar-block {
+        padding: 20px 20px 90px;
+    }
+}
+
+    /*===================================================*/
+
+    .display-table {
+        display: table;
+        padding: 0px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .display-table-row {
+        display: table-row;
+        height: 100%;
+    }
+
+    .display-table-cell {
+        display: table-cell;
+        float: none;
+        height: 100%;
+    }
+
+    .valing-top {
+        vertical-align: top;
+    }
+
+    #nav-header {
+        background-color: #fff;
+        border-bottom: 1px solid #e7eaec;
+        width: 100%;
+    }
+
+        #nav-header #header-search-field {
+            padding-top: 17px;
+            vertical-align: central;
+            border: none;
+            width: 300px;
+            outline: none;
+        }
+
+        #nav-header ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            color: #676a6c;
+        }
+
+            #nav-header ul li {
+                float: left;
+                margin-left: 15px;
+                padding: 17px 0px;
+            }
+
+            #nav-header ul .glyphicon {
+                color: #676a6c;
+            }
+
+    .label-message {
+        background-color: #1ab394;
+    }
+
+    #nav-header ul a {
+        text-decoration: none;
+    }
+
+    #nav-header .logout:hover {
+        color: #676a6c;
+    }
+
+    #nav-header #welcome {
+        margin-right: 20px;
+    }
+
+    #nav-header ul .label {
+        position: absolute;
+        margin-top: -10px;
+        margin-left: -5px;
+    }
+
+    #nav-header .fixed-width {
+        width: 35px;
+    }
+
+    #admin-footer {
+        position: absolute;
+        width: 100%;
+        bottom: 0px;
+        background-color: #fff;
+        padding: 10px;
+        font-size: 12px;
+        color: #676a6c;
+    }
+
+    .navbar-default {
+        background-color: #fff;
+    }
+
+        .navbar-default .navbar-toggle {
+            /*border-color: #1ab394;
+            background-color: #1ab394;*/
+        }
+
+        .navbar-default .icon-bar {
+            border: 1px #555 solid;
+        }
+
+        .navbar-default .navbar-toggle:hover {
+            background-color: #1ab394;
+        }
+
+    .navbar-toggle .navbar-toggle:focus {
+        background-color: #1ab394;
+    }
+
+    /*Current Student Profile Styling*/
+
+    .avatar-row {
+        background-color: #333b3e;
+        z-index: 0;
+        position: relative;
+        height: 200px;
+        background-image: url('../Media Content/COLOR-COVER-lg.jpg');
+    }
+
+    .name-uni-block #avatar-img {
+        border-radius: 100%;
+        position: relative;
+        align-content: center;
+        /*width: 75%;*/
+        /*box-shadow: 0.5px .5px 4px #555;*/
+        margin-bottom: 15px;
+        margin-top: -90px;
+        z-index: 1;
+    }
+
+
+    .name-uni-block #name-surname, #email-addr {
+        font-family: 'Open Sans';
+        font-weight: 500;
+        font-size: 11.5px;
+        display: block;
+        color: #999;
+    }
+
+    .name-uni-block #name-surname {
+        font-weight: bolder !important;
+        font-size: 20px !important;
+        margin-bottom: 10px;
+        display: block;
+        color: #777 !important;
+        white-space: nowrap;
+    }
+
+    .name-uni-block {
+        margin-bottom: 10px;
+    }
+
+        .name-uni-block #uni-name, #gender, #uni-course {
+            text-transform: uppercase;
+            color: #999;
+            font-family: 'Open Sans';
+            font-weight: 500;
+            font-size: 11.5px;
+            display: block;
+            white-space: nowrap;
+        }
+
+    .age-row {
+        padding: 20px 0px;
+    }
+
+        .age-row h4 {
+            color: #777;
+            display: block;
+        }
+
+    #header, #contact_id, #address_id {
+        color: #bbb;
+    }
+
+    #bio, #contact_header, #address_header {
+        color: #777;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    #contact_header, #address_header {
+        text-transform: uppercase;
+    }
+
+    .age-row {
+        border-top: 1px solid #f4f4f4;
+    }
+
+    .bio-row {
+        border-bottom: 1px solid #f4f4f4;
+        margin-bottom: 20px;
+    }
+
+    .contact-row, .address-row {
+        display: block; 
+    }
+
+.street-name, .post-code {
+    display: block;
+}
+
+#main-content {
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    margin-left: 16.5%;
+    float: right !important;
+    z-index: -1;
+    padding-top: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    #main-content {
+        margin-left: 8%;
+        position: center;
+        float: right !important;
+        width: 100% !important;
+    }
+
+    #navbar-right {
+        float: right;
+    }
+
+   body{
+        width: 113.8%;
+    }
+
+   #navbar-row{
+       width: 123.8% !important;
+   }
+}
+
+
+#navbar-row {
+    position:fixed;
+    margin-top: -35px;
+    z-index: 10;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+
+@media screen and (min-width: 144px) and (max-width: 768px) {
+    body {
+        float: left !important;
+        margin-left: -18.5% !important;
+       
+    }
+
+    #navbar-row {
+        width: 123.8% !important;
+    }
+
+    #announcement-card {
+        float: left !important;
+    
+    }
+}
+
+#announcement-item #announce-card {
+    box-shadow: 2px 2px 6px #bbb;
+}
+
+#announcement-body, #profile_card_left_content {
+    box-shadow: 1px 1px 6px #ccc;
+}
+
+.box #announcement-box-header {
+    margin-bottom: 0px;
+}
+
+.announcement-list li {
+    list-style: none;
+    display: block;
+}
+
+#announce-card {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#announce-header {
+    border-bottom: 1px solid #eee;
+    color: #777;
+}
+
+.message-box {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    .message-box #message-text {
+        color: #999;
+        font-family: 'Open Sans';
+        font-weight: 500;
+        font-size: 12px;
+        display: block;
+    }
+
+.box {
+    box-shadow: 1px 0px 6px #ccc;
+}

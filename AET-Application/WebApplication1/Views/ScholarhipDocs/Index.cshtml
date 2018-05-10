@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <h1>Upload supporting documents</h1>
+        @using (Html.BeginForm("UploadFile", "ScholarhipDocs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <div>
+                @Html.TextBox("file", "", new { type = "file" }) <br />
+
+                <input type="submit" value="Upload" />
+
+                @ViewBag.Message
+
+            </div>
+
+
+        }
+        
+    </div>
+</body>
+</html>

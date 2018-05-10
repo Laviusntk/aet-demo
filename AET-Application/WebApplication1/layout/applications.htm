@@ -1,0 +1,61 @@
+﻿<div ng-repeat="x in myapplications">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">{{ x.applicationName }}</h4>
+            <p class="card-text">Application Date : {{ x.applicationDate }}</p>
+            <p class="card-text">Application Status : {{ x.applicationStatus }}</p>
+
+          <div class="Application-{{ x.applicationStatus }}">
+            <a  class="btn btn-danger" id="cancel-application-button" href="/Dashboard/Cancel?appId={{ x.applicationId }}">Cancel</a>
+            <a class="btn btn-primary" name="{{ x.applicationId }}" id="reapply-button" href="/Dashboard/reapply?appId={{ x.applicationId }}" role="button">Re-Apply</a>
+            <a  class="btn btn-info" data-toggle="modal" data-target="#scholarship-doc-{{ x.applicationId }}" id="upload-docs-button">Upload Documents</a>
+            <a  class="btn btn-success" name="{{ x.applicationId }}" id="accept-offer-button" href="/Dashboard/Accept?appId={{ x.applicationId }}">Accept</a>
+            <a  class="btn btn-danger" name="{{ x.applicationId }}" id="decline-offer-button" href="/Dashboard/Decline?appId={{ x.applicationId }}">Decline</a>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="scholarship-doc-{{ x.applicationId }}" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">{{ x.applicationName }}  </h4>
+                </div>
+                <div class="modal-body">
+
+                    <!--File Upload Form--->
+                    <form form action="/Dashboard/UploadScholarshipFiles" method="post" enctype="multipart/form-data">
+                        <h4 for="text">Submit Supporting Documents</h4>
+                        <input type="hidden" value="{{ x.applicationId }}" name="applicationId">
+                        <label for="file"><input class="form-input" id="txt-input" type="file" name="idDocumentFile" placeholder="ID Document" required>
+Certified ID Document</label><br>
+
+                        <label for="file"><input class="form-input" id="txt-input" type="file" name="academicTranscriptFile" required> Certified Academic Transcript</label><br>
+
+
+                        <label for="file"><input class="form-input" id="txt-input" type="file" name="midyearReportFile" required>
+Certified Copy of Mid Year Report</label><br>
+
+
+
+                        <label for="file"><input class="form-input" id="txt-input" type="file" name="proofOfEarningsFile" required>Certified Proof of earnings</label><br>
+
+                        <label for="file"><input class="form-input" id="txt-input" type="file" name="cvFile" required>
+CV</label>
+                        <br><br>
+
+                        <button class="log-in"> Upload </button>
+                        <!--File Upload Form End--->
+                        </form>
+</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

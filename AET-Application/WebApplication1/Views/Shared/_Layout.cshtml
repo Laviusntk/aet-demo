@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top opaque-navbar opaque animated fadeIn ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @* @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+
+                <img src="~/Media Content/Accenture-red-arrow-logo -white.png" style="width: 20%; height: 20%;"/>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/Home/Contact">Contact</a>
+                    </li>
+                    <li>
+                    <li><button id="btnsLogin" data-target="#loginModal" data-toggle="modal" >LOGIN</button></li>
+
+                    <!--
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>-->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+   
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+
+        <!--FOOTER SECTION-->
+        <!--Author: Justin-->
+        <footer>
+        <div class="footer-box">
+            <div class="row" id="foot" style="background-color: black !important;">
+                <div class="col-md-3"></div>
+                <div class="col-md-6" style="margin-top: -50px;">
+
+                    <i class='fa fa-facebook'></i>
+                    <i class='fa fa-twitter'></i>
+                    <i class='fa fa-linkedin'></i>
+
+                    <div class="footer-links" style="margin-top:20px;">
+                        <span><a>About Accenture ET</a></span>
+                        <span><a>Contact Us</a> </span>
+                        <span><a href="https://www.accenture.com/za-en/privacy-policy">Privacy Policy </a></span>
+                        <span><a href="https://www.accenture.com/za-en/company-cookies-similar-technology">Cookie Policy</a> </span>
+                        <span><a>Site Maps</a></span>
+                    </div>
+                    <p>By using this site you agree that we can place cookies on your device. See our <a href="https://www.accenture.com/za-en/privacy-policy">Privacy Policy </a>and <a href="https://www.accenture.com/za-en/company-cookies-similar-technology">Cookie Policy</a> for details.</p>
+                    <p>&copy; @DateTime.Now.Year - Accenture Education Trust - All rights reserved</p>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+        </footer>
+        <!--End of FOOTER-->
+    </div>
+    @RenderSection("Scripts", false)
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+
+
+
+    
+</body>
+</html>

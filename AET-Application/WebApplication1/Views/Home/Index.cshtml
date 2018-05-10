@@ -1,0 +1,426 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Model Login
+
+<div class="full-width-image-2">
+    <!-- box content goes here if you want to put text or a button in here -->
+</div>
+
+<!--Custom Html Code-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<!--LOGIN MODAL FRONT END: ALUDE, BACKEND: LAVIUS-->
+<div class="modal fade" data-backdrop="static" id="loginModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" data-dismiss="modal">&times;</button>
+                <img src="~/Media Content/Accenture-red-arrow-logo.png" id="signInImg" />
+                <h4 class="modal-title">Sign in</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <button class="loginBtn loginBtn--linkedin" onclick="login()">Login with Linkedin</button>
+                    <button class="loginBtn loginBtn--google">@Html.ActionLink("Login with Google", "loginWithGoogle", "Home", null)</button>
+                    
+                        <div class="form-group">
+                            <h2 id="status-message" style="color: red;">Credentials Incorrect</h2>
+                            <label for="inputUsername">Username</label>
+                            <input class="form-control" placeholder="Email" name="email" type="email" id="email" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">Password</label>
+                            <input class="form-control" placeholder="Password" name="password" type="password" id="password" />
+                        </div>
+                        <div class="modal-footer">
+                            <a id="loading-message">Loading..</a><button class="btn btn-primary" onclick="Login()">Sign in</button>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Justin-->
+<!--Main banner-->
+<div class="row">
+    <div class="col-md-12">
+        <img src="~/Media Content/imgFocus.png" style="z-index:1000; top: 35%; position: absolute;  left:15%;" />
+        <div id="gradient" />
+    </div>
+
+</div>
+
+
+
+
+<!--Space-->
+<div class="row " id="about_row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div id="about_us">
+            <h1 id="aboutUsHeading">Who we are</h1>
+            <p id="descriptionAboutUs">
+                <br />
+            <p id="descriptionAboutUs">
+                Established in 2001, the Accenture Education Trust provides a platform
+                to assist financially disadvantaged students.
+            </p>
+
+            <p id="descriptionAboutUs">
+                Second to fourth year students who have strong academic ability and intend
+                pursuing a career in Computer Sience, Informatics/Information systems,
+                Information Technology and in the following branches of engineering:
+                computer/electrical (light current)/electronics/electro-mechanical/industrial.
+            </p>
+
+            <p id="descriptionAboutUs">
+                In 2006, the trust launched its Mentorship programme to provide additional
+                support for the students on scholarships. Many of the scholarship students
+                find the early years at university very challenging from both an academic
+                point of view as well as in their social interactions.
+            </p>
+
+            <p id="descriptionAboutUs">
+                The concept of using young Accenture people, who themselves were recently
+                in university, has gone a long way in addressing many of the gaps. At any
+                one time around 40 Accenture employees are involved in assisting our students
+                in many different ways. All this is done voluntarily and is one of the benefits
+                that our students quote as a differentiating factor for our scholarships.
+            </p>
+
+            <p id="descriptionAboutUs">
+                In 2010, our students delivered the best results ever with nearly 33 percent
+                of the courses taken passed in the 1st class and another 50 percent passed in
+                the 2nd class. We are exceptionally proud of our students who have maximized the
+                opportunity afforded to them. Six of our graduates joined Accenture as employees
+                during 2011 and we look forward to continuing our relationship with them as they
+                start their working careers.
+            </p>
+            </p>
+
+            <br />
+            <br />
+        </div>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+<!--image banner with text -->
+<!--Author: Alude, Modified by: Justin-->
+<script>
+    //Animation script for hovering over madiba quote
+    $(document).ready(function () {
+        $("#quote_row").hover(function () {
+            $("#left_col").css("box-shadow", "3px 3px 12px #333");
+            $(".quote_container").css("transform", "scale(1.01)");
+            $(".quote_container").css("-webkit-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("-moz-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("-ms-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("-o-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("transition", "all 0.7 ease-in-out");
+            $("#left_col").css("-webkit-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("-moz-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("-ms-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("-o-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("transition", "all 0.7 ease-in-out");
+        }, function () {
+            $("#left_col").css("box-shadow", "none");
+            $(".quote_container").css("transform", "scale(1)");
+            $(".quote_container").css("-webkit-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("-moz-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("-ms-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("-o-transition", "all 0.7s ease-in-out");
+            $(".quote_container").css("transition", "all 0.7 ease-in-out");
+            $("#left_col").css("-webkit-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("-moz-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("-ms-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("-o-transition", "all 0.7s ease-in-out");
+            $("#left_col").css("transition", "all 0.7 ease-in-out");
+
+        });
+    });
+</script>
+
+<!--quote section-->
+<div class="row" id="quote_row">
+    <div class="quote_container">
+        <div class="col-md-3" id="left_col">
+            <div id="left_section" style="z-index:2;">
+                <blockquote id="b-quote">
+                    “Education is the most powerful weapon which you can use to change the world. ”
+                    <p style="text-align: center;">
+                        <br />
+                        - Nelson Mandela
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+<!--banner image-->
+        <div class="col-md-8">
+            <div id="right_section">
+                <!-- <img width="100%" src="~/Media Content/indexPageImg.PNG" />-->
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--/image banner with text-->
+
+
+<!--Join Accenture Education Trust Section-->
+<!--Author: Alude, Modified: Justin-->
+<div class="row">
+    <div class="col-md-12">
+        <div id="join_section">
+
+            <h1 id="joinUsHeading">Join Accenture Education Trust</h1>
+            <center>
+                <p id="descriptionJoinSection">
+                    <br />
+                <p id="descriptionJoinSection">
+                    Accenture, through its independent Education Trust, helps economically disadvantaged
+                    students with strong academic backgrounds to further their studies at tertiary institutions
+                    in South Africa.
+                </p>
+
+                <p id="descriptionJoinSection">
+                    If you are you a high achiever in your second, third, fourth or Honours year of study,
+                    we want to hear from you.
+                </p>
+
+                <p id="descriptionJoinSection">
+                    Successful candidates will receive a full scholarship.
+                    The bursary programme covers the following expenses: registration fees, tuition fees,
+                    examination fees, meals, residence, book allowance for prescribed books and a laptop.
+                    In addition, the scholarship is backed up by ongoing mentorship.
+                </p>
+                <p id="descriptionJoinSection">
+                    Should you wish to apply for an Accenture (SA) Education Trust Scholarship to undertake 2nd to 4th year/Honours of
+                    full-time study at a tertiary institution, please click the registration button to apply.
+                </p>
+                <br />
+
+            </center>
+            <br />
+            <br />
+            <center><button class="btns" id="btnsReg" data-toggle="modal" data-target="#regoModal">REGISTER</button></center>
+        </div>
+    </div>
+
+</div>
+<!--END--/Join Accenture Education Trust Section-->
+
+<!--REGO MODAL-->
+<!-- Large modal -->
+@using ((@Html.BeginForm("Register", "Home", FormMethod.Post)))
+{
+<div class="modal fade" id="regoModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xlg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Registration </h4>
+            </div>
+
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <div class="col-md-6">
+                            <form role="form" class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="lastnameForm">Title</label>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <select class="form-control" name="titleForm"  required="required">
+                                                <option>Mr.</option>
+                                                <option>Ms.</option>
+                                                <option>Mrs.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">First Name</label>
+                                    <input type="text" class="form-control" name="firstName" placeholder="First Name" required="required" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastnameForm">Surname</label>
+                                    <input type="text" name="surname" class="form-control" name="surnameForm" placeholder="Surname" required="required" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" placeholder="Email"  required="required"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phonenumber">Cell No.</label>
+                                    <input type="number" class="form-control" name="cell" placeholder="Cell No."  required="required"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" name="password" placeholder="Password"  required="required"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input type="password" class="form-control" name="ConfirmPassword" placeholder="Confirm Password"  required="required"/>
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox" value="">I have read and agree to the <a href=""> terms & conditions</a></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="province">Province</label>  
+                                <select name="province" class="form-control"  required="required">
+                                    <option>Eastern Cape</option>
+                                    <option>Free State</option>
+                                    <option>Gauteng</option>
+                                    <option>KwaZulu-Natal</option>
+                                    <option>Limpopo</option>
+                                    <option>Mpumalanga</option>
+                                    <option>Northern Cape</option>
+                                    <option>North West</option>
+                                    <option>Western Cape</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="addressLine1">Street Name</label>
+                                <input type="text" name="streetName" class="form-control" id="address1" placeholder="e.g 8233 Krom Str"  required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="addressLine2">Township/Suburb</label>
+                                <input type="text" name="township" class="form-control" id="address2" placeholder="e.g Khayelitsha"  required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" name="city" class="form-control" id="city" placeholder="e.g Cape Town"  required="required"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="cityCode">Postal Code</label>
+                                <input type="number" name="citycode" class="form-control" id="postalCode" placeholder="Postal Code e.g 7100"  required="required"/>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-2">
+ 
+                                </div>
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary btn-sm pull-right">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+}
+<!--Animated gradient script for Main banner-->
+<script src="~/Scripts/AnimateGradient.js"></script>
+
+<!--LinkedIn Script-->
+<script type="text/javascript" src="https://platform.linkedin.com/in.js">
+  api_key: 86s8j5mq0d13i5
+  authorize: false
+  onLoad: defaultFunction
+</script>
+
+<script type="text/javascript">
+    $("#status-message").hide();
+    $("#loading-message").hide();
+    function defaultFunction() {
+    var x = document.getElementsByClassName("IN-widget");
+    x[0].style.display = "none";
+  }
+
+  function login(){
+    IN.User.authorize(function(){
+       onLinkedInAuth();
+     });
+  }
+
+  // 2. Runs when the JavaScript framework is loaded
+  function onLinkedInLoad() {
+    IN.Event.on(IN, "auth", onLinkedInAuth);
+  }
+
+
+  // 2. Runs when the viewer has authenticated
+  function onLinkedInAuth() {
+    IN.API.Profile("me")
+        .fields(["first-name", "last-name", "maiden-name","formatted-name","phonetic-first-name","phonetic-last-name","formatted-phonetic-name","headline","location","industry","current-share","num-connections","num-connections-capped","summary","specialties","positions","picture-url","picture-urls::(original)","site-standard-profile-request","email-address","associations","interests","publications","languages","skills","certifications","educations","courses","volunteer","three-current-positions","three-past-positions","num-recommenders","recommendations-received","following","date-of-birth","honors-awards"])
+        .result(displayProfiles);
+  }
+
+  // 2. Runs when the Profile() API call returns successfully
+    function displayProfiles(profiles) {
+      var _firstName = profiles.values[0].firstName;
+      var _email = profiles.values[0].emailAddress;
+      var _headline = profiles.values[0].headline;
+      var _industry = profiles.values[0].industry;
+      var _lastName = profiles.values[0].lastName;
+      var _location = profiles.values[0].location.name;
+      var _pf = profiles.values[0].pictureUrl;
+      var _summary = profiles.values[0].summary;
+      window.location.href = 'http://localhost:60409/Home/LinkedinLogin?' + "_firstName=" + _firstName + "&_email=" + _email + "&_headline=" + _headline + "&_industry=" + _industry + "&_lastName=" + _lastName + "&_pf=" + _pf + "&_location=" + _location + "&_summary=" + _summary;       
+      //document.write(JSON.stringify(profiles) + '<button onclick="logout()">Logout</button>');
+    }
+
+  function logout(){
+    IN.User.logout(logoutCallBack, logoutCallBack);
+  }
+
+  var logoutCallBack = function(data){
+    document.write(JSON.stringify(data));
+  }
+
+    function query(path, data, successCallBack, failureCallBack) {
+        $.ajax({
+            url: path + "?" + data,
+        })
+            .done(function (data) {
+                successCallBack(data);
+            })
+            .fail(function (data) {
+                failureCallBack(data);
+            });
+    }
+
+    var loginSuccessCallBck = function (data) {
+        if (data.code === 200) {
+            window.location.href = 'http://localhost:60409/Home/SetSID?' + "_email=" + $("#email").val() + "&_password=" + $("#password").val();
+        } else {
+            //alert("incorrect login details");
+            $("#email").css("border","1 px solid red");
+            $("#password").css("border", "1 px solid red");
+
+            $("#status-message").show();
+            $("#loading-message").hide();
+        }
+    }
+    var loginFaiureCallBck = function (data) {
+        alert(JSON.stringify(data));
+    }
+    function Login() {
+        $("#loading-message").show();
+        query(
+            "http://localhost:60409/api/auth",
+            "email=" + $("#email").val() + "&password=" + $("#password").val(),
+            loginSuccessCallBck,
+            loginFaiureCallBck
+        );
+        //"email=" + $("#email").val() + "&password=" + $("#password").val()
+    }
+    //Login();
+</script>

@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard</title>
+    <link href="~/Content/dashboard-styling.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/AdminLTE.min.css" rel="stylesheet" />
+    <link href="~/Content/_all-skins.min.css" rel="stylesheet" />
+    <link href="~/CSS/dashboard.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/JS/DashBoard.js"></script>
+    <script src="~/JS/PespStudent.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/node_modules/core-js/client/shim.min.js"></script>
+    <script src="/node_modules/zone.js/dist/zone.js"></script>
+    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <script src="/systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function (err) { console.error(err); });
+    </script>
+
+</head>
+
+<body ng-app="myApp">
+
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <!--===================================SIDE MENU====================================-->
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell valign-top " id="side-menu">
+                <a href="/Home/Index" style="background-color:#910B0B;"><img src="~/Media Content/Accenture-red-arrow-logo -white - Copy.png" style="height: 35px; width: 120.703px; padding-left:0px;" class="hidden-xs hidden-sm" /></a>
+
+                <!--<h1 class="hidden-xs hidden-sm">Navigation</h1>-->
+                <!--=============PROFILE IMAGE======================-->
+
+                <div class="avatar-block hidden-sm hidden-xs">
+                    <ul>
+                        <li>
+                            <center><img src="~/Media Content/pf.png" id="profile-pic"></center>
+                        </li>
+                        <li>
+                            <div id="left-bar-user-details">
+                                <center>
+                                    <h4 id="display-name">Jon Doe</h4>
+                                    <h5 id="headline">University of the Western Cape</h5>
+                                </center>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--================================================-->
+
+                <ul>
+                    <li class="nav-button" id="init-nav-button">
+                        <a href="#/!">
+                            <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="announcements-button">
+                        <a href="#!announcements">
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true"></span>
+                            <span class="label label-warning pull-right hidden-xs hidden-sm" id="num-of-announcements">0</span>
+                            <span class="hidden-sm hidden-xs">Announcements</span>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="applications-button">
+                        <a href="#!applications">
+                            <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>
+                            <span class="label label-warning pull-right hidden-xs hidden-sm" id="num-of-applications">0</span>
+                            <span class="hidden-sm hidden-xs">My Applications</span>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="uploads-button">
+                        <a href="#!uploads">
+                            <span class="glyphicon glyphicon-file" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">My Uploads</span>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="calendar-button">
+                        <a href="#!calendar">
+                            <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Calendar</span>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="messages-button">
+                        <a href="#!messages">
+                            <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
+                            <span class="label label-warning pull-right hidden-xs hidden-sm">0</span>
+                            <span class="hidden-sm hidden-xs">Messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-button" id="vacancies-button">
+                        <a href="#!vacancies">
+                            <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+                            <span class="hidden-sm hidden-xs">Vacancies</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--=============================END SIDE MENU=====================================-->
+            <!--=============================MAIN CONTENT====================================-->
+            <!--==============NAVBAR-DASH=================-->
+            <div class="col-md-10 col-sm-11 box display-table-cell valign-top">
+                <div class="row">
+                    <header id="nav-header" class="clearfix">
+                        <div class="col-md-5">
+                            <nav class="navbar-default pull-left">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#side-menu">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </nav>
+                            <input type="text" class="hidden-sm hidden-xs" id="header-search-field" placeholder="Search for something..." />
+                        </div>
+                        <div class="col-md-7">
+                            <ul class="pull-right">
+                                <li id="welcome" class="hidden-xs">Welcome to your Dashboard</li>
+                                <li>
+                                    <a href="/Dashboard/Logout" class="logout">
+                                        <span class="glyphicon glyphicon-log-out" aria-hidden="true"> </span>
+                                        Logout
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </header>
+                </div>
+                <div id="mainContent">
+                    <div ng-view></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        <script>
+
+            $(document).ready(function () {
+                $('[data-toggle="offcanvas"]').click(function () {
+                    $('#side-menu').toggleClass('hidden-xs');
+                });
+            });
+        </script>
+</body>
+</html>

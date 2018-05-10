@@ -1,0 +1,11 @@
+﻿<div ng-repeat="x in myannouncements">
+    <div class="card">
+        <div class="card-header">
+            Date Posted :{{ x.announcementDate }}   Author :{{ x.announcementAuthor }} 
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">{{ x.announcementSubject }}</h4>
+            <p class="card-text">{{ x.announcementMessage }}</p>
+        </div>
+    </div>
+</div>
